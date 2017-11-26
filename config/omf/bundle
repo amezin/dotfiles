@@ -1,0 +1,4 @@
+package direnv
+package sublime
+package virtualfish
+theme bobthefish

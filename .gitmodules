@@ -1,0 +1,12 @@
+[submodule "oh-my-fish"]
+	path = oh-my-fish
+	url = git@github.com:oh-my-fish/oh-my-fish.git
+[submodule "virtualenv"]
+	path = virtualenv
+	url = git@github.com:pypa/virtualenv.git
+[submodule "virtualfish"]
+	path = virtualfish
+	url = git@github.com:amezin/virtualfish.git
+[submodule "setuptools_scm"]
+	path = setuptools_scm
+	url = git@github.com:pypa/setuptools_scm.git
