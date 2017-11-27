@@ -5,3 +5,5 @@ set -l root_dir (realpath "$current_script_dir/../..")
 set PATH $PATH "$root_dir/pyenv/bin" $root_dir/pyenv/plugins/*/bin
 
 status --is-interactive; and source (pyenv init -|psub)
+
+set -gx EDITOR nano
