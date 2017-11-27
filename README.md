@@ -2,6 +2,8 @@
 
 - virtualfish with bundled virtualenv
 
+- pyenv
+
 Installation
 ------------
 

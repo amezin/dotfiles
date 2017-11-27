@@ -10,3 +10,6 @@
 [submodule "setuptools_scm"]
 	path = setuptools_scm
 	url = git@github.com:pypa/setuptools_scm.git
+[submodule "pyenv"]
+	path = pyenv
+	url = https://github.com/pyenv/pyenv.git
