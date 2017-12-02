@@ -11,3 +11,7 @@ set -gx EDITOR nano
 if test -d "/Applications/Sublime Text.app/Contents/SharedSupport/bin"
     set PATH $PATH "/Applications/Sublime Text.app/Contents/SharedSupport/bin"
 end
+
+if set -q ITERM_SESSION_ID
+    source $root_dir/iterm2_shell_integration.fish
+end
