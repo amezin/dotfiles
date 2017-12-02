@@ -13,3 +13,6 @@
 [submodule "pyenv"]
 	path = pyenv
 	url = https://github.com/pyenv/pyenv.git
+[submodule "theme-bobthefish"]
+	path = theme-bobthefish
+	url = git@github.com:oh-my-fish/theme-bobthefish.git
