@@ -22,9 +22,7 @@ set -g theme_display_user yes
 set -g theme_display_cmd_duration yes
 set -g theme_show_exit_status yes
 
-for theme_func in "$root_dir/theme-bobthefish"/*.fish
-    source "$theme_func"
-end
+set fish_function_path "$root_dir/theme-bobthefish" $fish_function_path
 
 if set -q ITERM_SESSION_ID
     source "$root_dir/iterm2_shell_integration.fish"
