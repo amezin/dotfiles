@@ -29,3 +29,5 @@ end
 if set -q ITERM_SESSION_ID
     source "$root_dir/iterm2_shell_integration.fish"
 end
+
+set VIRTUAL_ENV_DISABLE_PROMPT 1
