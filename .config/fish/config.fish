@@ -29,3 +29,7 @@ if set -q ITERM_SESSION_ID
 end
 
 set VIRTUAL_ENV_DISABLE_PROMPT 1
+
+if test -d /usr/local/opt/ccache/libexec
+    set PATH "/usr/local/opt/ccache/libexec" $PATH
+end
