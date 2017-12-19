@@ -1,18 +1,33 @@
-set -gx EDITOR nano
-
-if test -d "/Applications/Sublime Text.app/Contents/SharedSupport/bin"
-    set PATH $PATH "/Applications/Sublime Text.app/Contents/SharedSupport/bin"
-end
+set -x EDITOR nano
+set -x VIRTUAL_ENV_DISABLE_PROMPT 1
 
 set -l current_script (realpath (status -f))
 set -l current_script_dir (realpath (dirname "$current_script"))
 set -l root_dir (realpath "$current_script_dir/../..")
 
-set -x PYTHONPATH (string join ":" "$PYTHONPATH" "$root_dir/virtualenv" "$root_dir/virtualfish")
-eval (python -m virtualfish auto_activation)
+function prepend_path
+    for p in $argv
+        if not contains "$p" $PATH; and test -d "$p"
+            set PATH "$p" $PATH
+        end
+    end
+end
 
-set PATH $PATH "$root_dir/pyenv/bin" $root_dir/pyenv/plugins/*/bin
-status --is-interactive; and source (pyenv init -|psub)
+prepend_path /usr/lib/ccache /usr/local/opt/ccache/libexec
+prepend_path "/Applications/Sublime Text.app/Contents/SharedSupport/bin"
+prepend_path /home/linuxbrew/.linuxbrew/bin
+
+if command -v ruby >/dev/null
+    prepend_path (ruby -rubygems -e 'puts Gem.user_dir')/bin
+end
+
+prepend_path "$root_dir/pyenv/bin" "$root_dir"/pyenv/plugins/*/bin
+prepend_path "$HOME/.local/bin"
+
+if status --is-interactive
+    source (pyenv init -|psub)
+    eval (env "PYTHONPATH=$root_dir/virtualenv:$root_dir/virtualfish" python -m virtualfish auto_activation)
+end
 
 set -g theme_powerline_fonts no
 set -g theme_title_display_process yes
@@ -22,14 +37,10 @@ set -g theme_display_user yes
 set -g theme_display_cmd_duration yes
 set -g theme_show_exit_status yes
 
-set fish_function_path "$root_dir/theme-bobthefish" $fish_function_path
+if not contains "$root_dir/theme-bobthefish" $fish_function_path
+    set fish_function_path "$root_dir/theme-bobthefish" $fish_function_path
+end
 
 if set -q ITERM_SESSION_ID
     source "$root_dir/iterm2_shell_integration.fish"
-end
-
-set VIRTUAL_ENV_DISABLE_PROMPT 1
-
-if test -d /usr/local/opt/ccache/libexec
-    set PATH "/usr/local/opt/ccache/libexec" $PATH
 end
