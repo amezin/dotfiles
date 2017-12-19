@@ -9,5 +9,3 @@ set -q XDG_CONFIG_HOME
 
 command mkdir -p "$CONFIG_PATH/fish"
 command ln -sf "$current_script_dir/.config/fish/config.fish" "$CONFIG_PATH/fish/config.fish"
-
-command fish -c "omf install"
