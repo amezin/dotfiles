@@ -27,6 +27,7 @@ prepend_path "$HOME/.local/bin"
 if status --is-interactive
     source (pyenv init -|psub)
     eval (env "PYTHONPATH=$root_dir/virtualenv:$root_dir/virtualfish" python -m virtualfish auto_activation)
+    set -g VIRTUALFISH_PYTHON_EXEC "env PYTHONPATH=$root_dir/virtualenv:$root_dir/virtualfish $VIRTUALFISH_PYTHON_EXEC"
 end
 
 set -g theme_powerline_fonts no
