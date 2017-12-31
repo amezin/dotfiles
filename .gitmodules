@@ -1,12 +1,16 @@
 [submodule "virtualenv"]
 	path = virtualenv
 	url = git@github.com:pypa/virtualenv.git
+	branch = master
 [submodule "virtualfish"]
 	path = virtualfish
 	url = git@github.com:amezin/virtualfish.git
+	branch = master
 [submodule "pyenv"]
 	path = pyenv
 	url = https://github.com/pyenv/pyenv.git
+	branch = master
 [submodule "theme-bobthefish"]
 	path = theme-bobthefish
 	url = git@github.com:oh-my-fish/theme-bobthefish.git
+	branch = master
