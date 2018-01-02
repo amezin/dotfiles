@@ -4,7 +4,7 @@
 	branch = master
 [submodule "virtualfish"]
 	path = virtualfish
-	url = git@github.com:amezin/virtualfish.git
+	url = git@github.com:adambrenecki/virtualfish.git
 	branch = master
 [submodule "pyenv"]
 	path = pyenv
