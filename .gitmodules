@@ -14,3 +14,7 @@
 	path = theme-bobthefish
 	url = git@github.com:oh-my-fish/theme-bobthefish.git
 	branch = master
+[submodule "bash-git-prompt"]
+	path = bash-git-prompt
+	url = git@github.com:magicmonty/bash-git-prompt.git
+	branch = master
