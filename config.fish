@@ -2,8 +2,7 @@ set -x EDITOR nano
 set -x VIRTUAL_ENV_DISABLE_PROMPT 1
 
 set -l current_script (realpath (status -f))
-set -l current_script_dir (realpath (dirname "$current_script"))
-set -l root_dir (realpath "$current_script_dir/../..")
+set -l root_dir (realpath (dirname "$current_script"))
 
 function prepend_path
     for p in $argv
