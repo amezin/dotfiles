@@ -15,6 +15,7 @@ end
 prepend_path /usr/lib/ccache /usr/local/opt/ccache/libexec
 prepend_path "/Applications/Sublime Text.app/Contents/SharedSupport/bin"
 prepend_path /home/linuxbrew/.linuxbrew/bin
+prepend_path "$HOME/Library/Android/sdk/platform-tools"
 
 if command -v ruby >/dev/null
     prepend_path (ruby -rubygems -e 'puts Gem.user_dir')/bin
