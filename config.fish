@@ -19,7 +19,7 @@ prepend_path "$HOME/Library/Android/sdk/platform-tools"
 prepend_path "/Applications/Wine Devel.app/Contents/Resources/wine/bin"
 
 if command -v ruby >/dev/null
-    prepend_path (ruby -rubygems -e 'puts Gem.user_dir')/bin
+    prepend_path (ruby -rrubygems -e 'puts Gem.user_dir')/bin
 end
 
 prepend_path "$root_dir/pyenv/bin" "$root_dir"/pyenv/plugins/*/bin
