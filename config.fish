@@ -12,7 +12,7 @@ function prepend_path
     end
 end
 
-prepend_path /usr/lib/ccache /usr/local/opt/ccache/libexec
+prepend_path /usr/lib/ccache /usr/lib/ccache/bin /usr/local/opt/ccache/libexec
 prepend_path "/Applications/Sublime Text.app/Contents/SharedSupport/bin"
 prepend_path /home/linuxbrew/.linuxbrew/bin
 prepend_path "$HOME/Library/Android/sdk/platform-tools"
