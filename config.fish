@@ -43,6 +43,10 @@ if not contains "$root_dir/theme-bobthefish" $fish_function_path
     set fish_function_path "$root_dir/theme-bobthefish" $fish_function_path
 end
 
+if not contains "$root_dir/theme-bobthefish/functions" $fish_function_path
+    set fish_function_path "$root_dir/theme-bobthefish/functions" $fish_function_path
+end
+
 if set -q ITERM_SESSION_ID
     source "$root_dir/iterm2_shell_integration.fish"
 end
