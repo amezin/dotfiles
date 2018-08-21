@@ -50,3 +50,7 @@ end
 if set -q ITERM_SESSION_ID
     source "$root_dir/iterm2_shell_integration.fish"
 end
+
+if test -f "$HOME/.cargo/env"
+    source "$HOME/.cargo/env"
+end
