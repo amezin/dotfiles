@@ -1,0 +1,14 @@
+[user]
+	name = Aleksandr Mezin
+	email = mezin.alexander@gmail.com
+[color]
+	ui = auto
+[sendemail]
+	smtpserver = smtp.gmail.com
+	smtpserverport = 587
+	smtpencryption = tls
+	smtpuser = mezin.alexander@gmail.com
+	annotate = yes
+	confirm = always
+	tocmd ="$(dirname $(readlink -f $HOME/.gitconfig))/linux-git-send-email-to"
+	cccmd ="$(dirname $(readlink -f $HOME/.gitconfig))/linux-git-send-email-cc"

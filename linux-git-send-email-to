@@ -1,0 +1,9 @@
+#!/bin/bash
+
+set -e
+
+getmaint=`git rev-parse --show-toplevel`/scripts/get_maintainer.pl
+
+if [ -e "${getmaint}" ]; then
+	`git rev-parse --show-toplevel`/scripts/get_maintainer.pl -i --nogit --nogit-fallback --norolestats --nom "$@"
+fi
