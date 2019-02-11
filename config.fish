@@ -35,6 +35,7 @@ set -g theme_powerline_fonts no
 set -g theme_title_display_process yes
 set -g theme_display_git_ahead_verbose yes
 set -g theme_git_worktree_support yes
+set -g theme_display_hg yes
 set -g theme_display_user yes
 set -g theme_display_cmd_duration yes
 set -g theme_show_exit_status yes
